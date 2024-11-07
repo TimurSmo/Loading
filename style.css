@@ -1,0 +1,115 @@
+:root {
+    --green: #0B8258;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro-ball {
+    width: 100px;
+    height: 100px;
+    background-color: var(--green);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation-fill-mode: both;
+    animation-direction: alternate;
+    transition: 0.3s ease-in-out;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+svg>path {
+    transition: 1s ease-in-out;
+}
+
+.white-logo>path {
+    fill: #fff;
+}
+
+.ball-bounce-in {
+    transform: translate(-50%, -50%);
+    animation: bounce-in-down 1s ease-in-out;
+}
+
+@keyframes bounce-in-down {
+    0% {
+        top: -1000px;
+    }
+    25% {
+        top: 60%;
+    }
+    50% {
+        top: 40%;
+    }
+    75% {
+        top: 55%;
+    }
+    100% {
+        top: 50%;
+    }
+}
+
+.screen-ball {
+    animation: ball-grow 1s ease-in-out;
+}
+
+@keyframes ball-grow {
+    0% {
+        width: 100px;
+        height: 100px;
+    }
+
+    25% {
+        width: 254px;
+        height: 254px;
+    }
+
+    35% {
+        width: 274px;
+        height: 274px;
+    }
+
+    45% {
+        width: 254px;
+        height: 254px;
+    }
+}
+
+.continue-btn {
+    background: var(--green);
+    width: 320px;
+    max-width: 90%;
+    color: white;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: -80px;
+    border: 0;
+    border-radius: 12px;
+    font-size: 35px;
+    transition: 0.3s ease-in-out;
+    opacity: 0;
+}
